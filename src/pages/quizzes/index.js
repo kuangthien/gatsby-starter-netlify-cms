@@ -1,14 +1,14 @@
-import React from 'react';
+import React from 'react'
 
-import Layout from '../../components/Layout';
-import QuizList from '../../components/QuizList';
+import Layout from '../../components/Layout'
+import QuizList from './../../components/QuizList'
 
 const QuizzesIndexPage = () => {
-	return (
-		<Layout>
-			<QuizList />
-		</Layout>
-	);
-};
+  return (
+    <Layout>
+      <QuizList />
+    </Layout>
+  )
+}
 
-export default QuizzesIndexPage;
+export default QuizzesIndexPage
