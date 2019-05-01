@@ -1,0 +1,17 @@
+@import '../../../node_modules/bootstrap-scss/mixins/breakpoints';
+
+@for $i from 10 through 52 {
+	.fz-#{$i} {
+		font-size: #{$i}px;
+	}
+	.fz-sm-#{$i} {
+		@include media-breakpoint-up(sm) {
+			font-size: #{$i}px;
+		}
+	}
+	.fz-md-#{$i} {
+		@include media-breakpoint-up(md) {
+			font-size: #{$i}px;
+		}
+	}
+}
