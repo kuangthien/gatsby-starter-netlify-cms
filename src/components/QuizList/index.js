@@ -1,29 +1,30 @@
 import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 import QuizItem from './QuizItem'
-import './styles.scss';
+import './styles.scss'
 
 const QuizList = props => {
   const { data } = props
   const { edges: quizzes } = data.allMarkdownRemark
-   return (
+  return (
     <div className=" ">
       <div className=" ">
         {quizzes &&
           quizzes.map(({ node: quizPost }) => (
             <div className=" " key={quizPost.id}>
-               <article className="  ">
+              <article className="  ">
                 <QuizItem
                   {...{
                     id: quizPost.id,
                     title: quizPost.frontmatter.title,
                     desc: quizPost.frontmatter.description,
-                    image: quizPost.frontmatter.featuredimage.childImageSharp.fluid.src,
+                    image:
+                      quizPost.frontmatter.featuredimage.childImageSharp.fluid
+                        .src,
+                    slug: quizPost.fields.slug,
                   }}
                   key={quizPost.id}
                 />
-
-                
               </article>
             </div>
           ))}
