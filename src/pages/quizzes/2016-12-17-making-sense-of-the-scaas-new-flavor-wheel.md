@@ -1,34 +1,27 @@
 ---
 templateKey: quiz-post
-title: Making sense of the SCAA’s new Flavor Wheel
+title: Đoán món ăn Việt Nam qua hình ảnh
 date: 2016-12-17T15:04:10.000Z
 featuredpost: false
 featuredimage: /img/flavor_wheel.jpg
-description: The Coffee Taster’s Flavor Wheel, the official resource used by coffee tasters, has been revised for the first time this year.
-tags:
-  - flavor
-  - tasting
+description: Hãy thực hiện một chuyến trải nghiệm ẩm thực bằng hình ảnh và đoán xem những món ăn này tên là gì, đến từ đâu.
+questions:
+  - answers:
+      - content: Bánh canh
+        is-correct: false
+      - content: ' Bún đũa (canh bún)'
+        is-correct: true
+      - content: ' Bún riêu cua'
+        is-correct: false
+    content: Đây là món ăn gì?
+    feedback: ' Đây là món bún đũa nổi tiếng được bán trên vỉa hè và các quán bình dân ở Nam Định. Món ăn lót dạ này trông khá giống bún riêu nhưng chỉ cho cà chua và mắm tôm chứ không thêm dấm bỗng, me, sấu, cũng không ăn kèm rau sống mà ăn với rau muống luộc, rau dút, rau cải. Ở Hà Nội và TP.HCM, người ta gọi đây là “canh bún”. '
+    image: /images/uploads/doan-mon-an-viet-nam-qua-hinh-1388-4315-1469085365.jpg
+  - answers:
+      - content: Bánh khọt
+      - content: Bánh tôm
+      - content: Bánh ram ít
+        is-correct: true
+    content: Đây là món ăn gì?
+    feedback: Đây là bánh ram ít, một món dân gian được tiến cung từ lâu, nay là món ăn vặt phổ biến của xứ Huế. Đúng như tên gọi, bánh có hai phần là bánh ram và bánh ít, lớp dưới giòn rụm, lớp trên dẻo quánh, vị tôm thịt bên trong ngọt lừ, có một lớp mỡ hành và tôm chấy bắt mắt.
+    image: https://i-dulich.vnecdn.net/2016/07/21/doan-mon-an-viet-nam-qua-hinh-2657-7358-1469085365.jpg
 ---
-
-![flavor wheel](/img/flavor_wheel.jpg)
-
-The SCAA updated the wheel to reflect the finer nuances needed to describe flavors more precisely. The new descriptions are more detailed and hence allow cuppers to distinguish between more flavors.
-
-While this is going to be a big change for professional coffee tasters, it means a lot to you as a consumer as well. We’ll explain how the wheel came to be, how pros use it and what the flavors actually mean.
-
-## What the updates mean to you
-
-The Specialty Coffee Association of America (SCAA), founded in 1982, is a non-profit trade organization for the specialty coffee industry. With members located in more than 40 countries, SCAA represents every segment of the specialty coffee industry, including:
-
-* producers
-* roasters
-* importers/exporters
-* retailers
-* manufacturers
-* baristas
-
-For over 30 years, SCAA has been dedicated to creating a vibrant specialty coffee community by recognizing, developing and promoting specialty coffee. SCAA sets and maintains quality standards for the industry, conducts market research, and provides education, training, resources, and business services for its members.
-
-Coffee cupping, or coffee tasting, is the practice of observing the tastes and aromas of brewed coffee. It is a professional practice but can be done informally by anyone or by professionals known as "Q Graders". A standard coffee cupping procedure involves deeply sniffing the coffee, then loudly slurping the coffee so it spreads to the back of the tongue.
-
-The coffee taster attempts to measure aspects of the coffee's taste, specifically the body (the texture or mouthfeel, such as oiliness), sweetness, acidity (a sharp and tangy feeling, like when biting into an orange), flavour (the characters in the cup), and aftertaste. Since coffee beans embody telltale flavours from the region where they were grown, cuppers may attempt to identify the coffee's origin.

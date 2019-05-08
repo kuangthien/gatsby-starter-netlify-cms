@@ -1,60 +1,63 @@
 $grid-breakpoints: (
-	xs: 0,
-	sm: 40rem,
-	md: 52rem,
-	lg: 64rem,
-	xl: 90rem,
+  xs: 0,
+  sm: 40rem,
+  md: 52rem,
+  lg: 64rem,
+  xl: 90rem,
 );
 $container-max-widths: (
-	sm: 38rem,
-	md: 50rem,
-	lg: 62rem,
-	xl: 88rem,
+  sm: 38rem,
+  md: 50rem,
+  lg: 62rem,
+  xl: 88rem,
 );
 @import '../../../node_modules/bootstrap-scss/bootstrap.scss';
-@import 'app';
 @import 'common.scss';
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600');
+// @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&subset=vietnamese');
+
 .container-fluid {
-	max-width: 1136px;
+  max-width: 1136px;
 }
 body {
-	margin: 0;
-	padding: 0;
-	font-family: 'Fira Sans', sans-serif;
-	background: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  font-family: 'Fira Sans', sans-serif;
+//   font-family: 'Roboto Condensed', sans-serif;
+
+  background: #f4f4f4;
 }
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 /* Result Component */
 .result {
-	padding: 1.5rem 2.5rem;
+  padding: 1.5rem 2.5rem;
 }
 /* Animation */
 .fade-enter {
-	opacity: 0;
+  opacity: 0;
 }
 .fade-enter.fade-enter-active {
-	opacity: 1;
-	transition: opacity 0.5s ease-in-out 0.3s;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out 0.3s;
 }
 .fade-leave {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 1;
 }
 .fade-leave.fade-leave-active {
-	opacity: 0;
-	transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 .fade-appear {
-	opacity: 0;
+  opacity: 0;
 }
 .fade-appear.fade-appear-active {
-	opacity: 1;
-	transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
 }

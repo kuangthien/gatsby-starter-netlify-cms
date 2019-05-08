@@ -1,0 +1,108 @@
+{
+  "id": "1",
+  "title": "Đoán món ăn Việt Nam qua hình ảnh",
+  "desc": "Hãy thực hiện một chuyến trải nghiệm ẩm thực bằng hình ảnh và đoán xem những món ăn này tên là gì, đến từ đâu.",
+  "img": "https://vietnammoi.vn/stores/news_dataimages/hangtt/042018/15/14/3312_maxresdefault.jpg",
+  "questions": [
+    {
+      "id": "1",
+      "question": "Câu số  1",
+      "image": "https://i-dulich.vnecdn.net/2016/07/21/doan-mon-an-viet-nam-qua-hinh-1388-4315-1469085365.jpg",
+      "feedback": "Đây là món bún đũa nổi tiếng được bán trên vỉa hè và các quán bình dân ở Nam Định. Món ăn lót dạ này trông khá giống bún riêu nhưng chỉ cho cà chua và mắm tôm chứ không thêm dấm bỗng, me, sấu, cũng không ăn kèm rau sống mà ăn với rau muống luộc, rau dút, rau cải. Ở Hà Nội và TP.HCM, người ta gọi đây là “canh bún”.",
+      "answers": [
+        { "content": "Bánh canh " },
+        { "content": "Bún đũa (canh bún)", "is-correct": true },
+        { "content": "Bún riêu cua" }
+      ]
+    },
+    {
+      "id": "2",
+      "question": "Câu số  2",
+      "image": "https://i-dulich.vnecdn.net/2016/07/21/doan-mon-an-viet-nam-qua-hinh-2657-7358-1469085365.jpg",
+      "feedback": "Đây là bánh ram ít, một món dân gian được tiến cung từ lâu, nay là món ăn vặt phổ biến của xứ Huế. Đúng như tên gọi, bánh có hai phần là bánh ram và bánh ít, lớp dưới giòn rụm, lớp trên dẻo quánh, vị tôm thịt bên trong ngọt lừ, có một lớp mỡ hành và tôm chấy bắt mắt.",
+      "answers": [
+        { "content": " Bánh khọt " },
+        { "content": "Bánh tôm" },
+        { "content": "Bánh ram ít", "is-correct": true }
+      ]
+    },
+    {
+      "id": "3",
+      "question": "Câu số  3",
+      "image": "https://i-dulich.vnecdn.net/2016/07/21/doan-mon-an-viet-nam-qua-hinh-2082-2618-1469085365.jpg",
+      "feedback": "Đây là món cháo ấu tẩu, đặc sản vùng cao nguyên đá Hà Giang. Củ ấu tẩu là vị thuốc quý nhưng cũng có độc tính rất mạnh, do vậy quá trình nấu cháo mất đến nửa ngày để khử độc.",
+      "answers": [
+        { "content": "Cháo ấu tẩu ", "is-correct": true },
+        { "content": "Súp trứng bắc thảo " },
+        { "content": "Cháo thịt xay" }
+      ]
+    },
+    {
+      "id": "4",
+      "question": "Câu số  4",
+      "image": "https://i-dulich.vnecdn.net/2016/07/21/doan-mon-an-viet-nam-qua-hinh-7767-5740-1469088325.jpg",
+      "feedback": "Đây là giá bể xào chua ngọt, một món ăn vỉa hè độc đáo của Hải Phòng. Thực khách khi ăn dùng lưỡi tách hai vỏ để nhằn phần thịt đậm vị biển bên trong. Cọng râu giòn sật trông như cọng giá đỗ cũng là phần thường xuyên được gọi thêm để thưởng thức.",
+      "answers": [
+        { "content": "Giá bể xào", "is-correct": true },
+        { "content": "Ốc móng tay xào me " },
+        { "content": "Hến xào hẹ" }
+      ]
+    },
+    {
+      "id": "5",
+      "question": "Câu số 5",
+      "image": "https://i-dulich.vnecdn.net/2016/07/21/doan-mon-an-viet-nam-qua-hinh-4722-5976-1469088325.jpg",
+      "feedback": "Đây là món don đặc trưng của Quảng Ngãi. Người dân sông Trà và sông Vệ cứ đến mùa là đi cào don vùi sâu trong cát. Don cùng họ với hến nhưng ngọt và thơm hơn. Món don được nấu đơn giản với nước luộc don nêm nếm gia vị, ruột don có thể phi hành tỏi hoặc để nguyên, bẻ bánh tráng nướng ăn kèm.",
+      "answers": [
+        { "content": "Súp gà" },
+        { "content": "Canh hến " },
+        { "content": "Don", "is-correct": true }
+      ]
+    },
+    {
+      "id": "6",
+      "question": "Câu số 6",
+      "image": "https://i-dulich.vnecdn.net/2016/07/21/doan-mon-an-viet-nam-qua-hinh-5795-9815-1469088325.jpg",
+      "feedback": "Đây là món vịt nấu chao của người dân Nam bộ, nổi tiếng nhất là ở Cần Thơ. Món ăn này hấp dẫn nhờ vịt chín mềm, khoai môn bùi bùi, nước dùng đậm đà với vị gừng, chao, rượu trắng, nước cốt dừa rất đặc trưng.",
+      "answers": [
+        { "content": "Vịt nấu chao ", "is-correct": true },
+        { "content": "Vịt om sấu " },
+        { "content": "Vịt tiềm ngũ quả" }
+      ]
+    },
+    {
+      "id": "7",
+      "question": "Câu số 7",
+      "image": "https://i-dulich.vnecdn.net/2016/07/21/doan-mon-an-viet-nam-qua-hinh-2285-3460-1469088325.jpg",
+      "feedback": "Bánh tằm khoai mì, hay còn gọi là bánh tằm ngọt, là một món ăn vặt dân dã của vùng Nam bộ. Tên gọi xuất phát từ hình dáng thuôn dài khá giống con tằm. Bánh làm từ khoai mì, hơi dai dai nhờ bột năng, thơm hương dừa, mè rang và có màu sắc bắt mắt.",
+      "answers": [
+        { "content": "Bánh dừa tấm " },
+        { "content": "Bánh tằm khoai mì ", "is-correct": true },
+        { "content": " Bánh da lợn" }
+      ]
+    },
+    {
+      "id": "8",
+      "question": "Câu số 8",
+      "image": "https://i-dulich.vnecdn.net/2016/07/21/doan-mon-an-viet-nam-qua-hinh-5332-5096-1469088325.jpg",
+      "feedback": "Đây là món bánh ép khoái khẩu của người Huế. Nguyên liệu chế biến món ăn là bột lọc, trứng, tôm, thịt. Bánh được ép bằng dụng cụ riêng trên lửa than, khi ăn cuốn với rau dưa và chấm vào nước mắm đủ vị chua cay mặn ngọt.",
+      "answers": [
+        { "content": "Bánh ép ", "is-correct": true },
+        { "content": "Bánh khoái " },
+        { "content": "Bánh đập" }
+      ]
+    },
+    {
+      "id": "9",
+      "question": "Câu số 9",
+      "image": "https://i-dulich.vnecdn.net/2016/07/21/doan-mon-an-viet-nam-qua-hinh-5444-3698-1469088325.jpg",
+      "feedback": "Đây là món phở khô trứ danh ở Gia Lai. Dân địa phương còn gọi bằng cái tên “phở hai tô”, bởi khi ăn bạn sẽ được phục vụ hai tô riêng rẽ. Phở khô có sợi mảnh, mềm, rắc thịt bằm, hành khô, giá chần, vừa ăn vừa húp nước lèo ở tô bên cạnh. Tương đen ngậy béo từ đậu nành lên men sẽ khiến món ăn thêm tròn vị.",
+      "answers": [
+        { "content": "Hủ tiếu trộn" },
+        { "content": "Phở khô ", "is-correct": true },
+        { "content": "Cao lầu khô" }
+      ]
+    }
+  ],
+  "resultAnswersMap": null
+}
