@@ -1,6 +1,5 @@
 import React from 'react'
-import Question from './Question'
-import AnswerOption from './AnswerOption'
+import AnswerOption from '../AnswerOption'
 
 function Quiz(props) {
   function renderAnswerOptions(key) {
@@ -71,11 +70,12 @@ function Quiz(props) {
           </div>
         )}
       </div>
-      <Question
-        content={props.question}
-        counter={props.questionId}
-        total={props.questionTotal}
-      />
+      <h2 className=" col-12 h6  py-4  font-weight-bold">
+        Câu <span>{props.questionId}</span>
+        <span>: </span>
+        {props.question}
+      </h2>
+
       <ul className="answerOptions">
         {props.answerOptions.map(renderAnswerOptions)}
       </ul>

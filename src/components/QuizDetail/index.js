@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import QuizFeedbackInstant from './QuizSection'
 
-import './QuizDetail.scss'
-import mockData from './mock.json'
+import './styles.scss'
 
 class QuizDetail extends Component {
   constructor(props, context) {
@@ -12,7 +11,7 @@ class QuizDetail extends Component {
   }
 
   componentDidMount() {
-    const { quizQuestions,quizImage ,quizTitle} = this.props
+    const { quizQuestions, quizImage, quizTitle } = this.props
     const shuffledAnswerOptions = quizQuestions.map(
       question => question.answers
     )
