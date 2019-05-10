@@ -3,7 +3,8 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-import QuizDetail from '../components/QuizDetail'
+import QuizDetailFeedbackInstant from '../components/QuizDetail/FeedbackInstant'
+import QuizDetailFeedbackComputed from '../components/QuizDetail/FeedbackComputed'
 
 export const QuizPostTemplate = ({
   content,
@@ -13,6 +14,8 @@ export const QuizPostTemplate = ({
   title,
   helmet,
   image,
+  quizType,
+  resultAnswersMap,
 }) => {
   const PostContent = contentComponent || Content
 
@@ -28,11 +31,21 @@ export const QuizPostTemplate = ({
 
             <p>{description}</p>
             {/* <PostContent content={content} /> */}
-            <QuizDetail
-              quizQuestions={questions}
-              quizTitle={title}
-              quizImage={image}
-            />
+            {/* {quizType === 'feedback-computed' && (
+              <QuizDetailFeedbackComputed
+                quizQuestions={questions}
+                quizTitle={title}
+                quizImage={image}
+                resultAnswersMap={resultAnswersMap}
+              />
+            )} */}
+            {quizType === 'feedback-instant' && (
+              <QuizDetailFeedbackInstant
+                quizQuestions={questions}
+                quizTitle={title}
+                quizImage={image}
+              />
+            )}
           </div>
         </div>
       </div>
@@ -43,6 +56,7 @@ export const QuizPostTemplate = ({
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
 
+  console.log(post)
   return (
     <Layout>
       <QuizPostTemplate
@@ -61,6 +75,8 @@ const BlogPost = ({ data }) => {
         title={post.frontmatter.title}
         questions={post.frontmatter.questions}
         image={post.frontmatter.featuredimage.childImageSharp.fluid.src}
+        quizType={post.frontmatter.quizType}
+        resultAnswersMap={post.frontmatter.resultAnswersMap}
       />
     </Layout>
   )
@@ -93,6 +109,8 @@ export const pageQuery = graphql`
             is_correct
           }
         }
+        resultAnswersMap
+        quizType
       }
     }
   }

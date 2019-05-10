@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
-import Quiz from './Quiz'
+import Quiz from '../Quiz'
 import Result from './Result'
-
-let API = 'https://ahaquiz-cms.netlify.com/.netlify/functions/'
 
 class QuizSection extends Component {
   constructor(props, context) {
@@ -33,30 +31,35 @@ class QuizSection extends Component {
     const { answer, answerOptions } = this.state
     const arrC =
       answerOptions.filter(obj => {
-        return obj.content === answer && obj['is-correct']
+        console.log(obj)
+        return obj.content === answer && obj['is_correct']
       }) || []
+
+      console.log(arrC)
     return arrC.length > 0
   }
 
   setUserAnswer(answer) {
+    const { answersCorrectCount, counter } = this.state
+    const { quizQuestions } = this.props
+
     this.setState(
       {
         answer: answer,
+        feedback: quizQuestions[counter].feedback,
+        counter: counter + 1,
       },
       () => {
-        const { answersCorrectCount } = this.state
         this.checkIsCorrectAnswer() &&
-          this.setState({
-            answersCorrectCount: answersCorrectCount + 1,
-          })
+          this.setState({ answersCorrectCount: answersCorrectCount + 1 })
       }
     )
   }
 
   setNextQuestion() {
-    const { quizQuestions, questionId, counter } = this.state
+    const { quizQuestions } = this.props
+    const { questionId, counter } = this.state
     this.setState({
-      counter: counter + 1,
       questionId: questionId + 1,
       question: quizQuestions[counter].question,
       feedback: quizQuestions[counter].feedback,

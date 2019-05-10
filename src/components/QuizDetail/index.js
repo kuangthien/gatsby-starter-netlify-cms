@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import QuizFeedbackInstant from './QuizSection'
 
 import './styles.scss'
 
@@ -11,16 +10,25 @@ class QuizDetail extends Component {
   }
 
   componentDidMount() {
-    const { quizQuestions, quizImage, quizTitle } = this.props
+    const { quizQuestions, quizImage, quizTitle, resultAnswersMap } = this.props
     const shuffledAnswerOptions = quizQuestions.map(
       question => question.answers
     )
 
+    //   this.setState({
+    //     quizType: "feedback-computed",
+    //     question: quizQuestions[0].question,
+    //     answerOptions: shuffledAnswerOptions[0],
+    //     questionImage: quizQuestions[0].image,
+    //     quizImage,
+    //     quizTitle,
+    //     resultAnswersMap,
+    //     quizQuestions
+    // });
     this.setState({
       quizType: 'feedback-instant',
       questionContent: quizQuestions[0].content,
       answerOptions: shuffledAnswerOptions[0],
-      feedback: quizQuestions[0].feedback,
       questionImage: quizQuestions[0].image,
       quizImage,
       quizTitle,
@@ -29,9 +37,9 @@ class QuizDetail extends Component {
   }
 
   render() {
-    return this.state.quizQuestions.length ? (
-      <QuizFeedbackInstant {...this.state} />
-    ) : null
+    return this.state.quizQuestions.length
+      ? this.props.renderQuizSection(this.state)
+      : null
   }
 }
 
