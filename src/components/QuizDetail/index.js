@@ -9,7 +9,7 @@ class QuizDetail extends React.Component {
   }
 
   componentDidMount() {
-    const { quizQuestions, quizImage, quizTitle, resultAnswersMap } = this.props
+    const { quizQuestions, quizImage, quizTitle } = this.props
     const shuffledAnswerOptions = quizQuestions.map(
       question => question.answers
     )
@@ -20,14 +20,13 @@ class QuizDetail extends React.Component {
       questionImage: quizQuestions[0].image,
       quizImage,
       quizTitle,
-      resultAnswersMap,
       quizQuestions,
     })
   }
 
   render() {
     return this.state.quizQuestions.length
-      ? this.props.renderQuizSection(this.state)
+      ? this.props.children(this.state)
       : null
   }
 }

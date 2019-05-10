@@ -1,15 +1,6 @@
 import React from 'react'
 import QuizFeedbackInstant from './QuizSection'
-
 import QuizDetail from './../../QuizDetail'
 
-const QuizDetailFeedbackInstant = props => {
-  return (
-    <QuizDetail
-      {...props}
-      renderQuizSection={props => <QuizFeedbackInstant {...props} />}
-    />
-  )
-}
-
-export default QuizDetailFeedbackInstant
+const quizSection = props => <QuizFeedbackInstant {...props} />
+export default props => <QuizDetail {...props}>{quizSection}</QuizDetail>

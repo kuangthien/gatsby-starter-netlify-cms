@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Quiz from '../Quiz'
-import ResultComputed from './Result'
 
 class QuizSection extends Component {
   constructor(props, context) {
@@ -85,7 +84,7 @@ class QuizSection extends Component {
   }
   renderQuiz() {
     return (
-      <React.Fragment>
+      <>
         <div
           className="quiz-header fz-22 p-3 pb-5 text-right text-lowercase  "
           style={{
@@ -107,20 +106,14 @@ class QuizSection extends Component {
           onAnswerSelected={this.handleAnswerSelected}
           buttonAction={null}
         />
-      </React.Fragment>
+      </>
     )
   }
 
   render() {
     let render
     if (this.state.wannaResult) {
-      render = (
-        <ResultComputed
-          collectedAnswers={this.state.collectedAnswers}
-          quizId={this.props.quizId}
-          resultAnswersMap={this.props.resultAnswersMap}
-        />
-      )
+      render = this.props.renderResultComputed(this.state)
     } else {
       render = this.renderQuiz()
     }
