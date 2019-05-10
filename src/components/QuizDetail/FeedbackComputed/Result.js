@@ -1,6 +1,6 @@
 import React, { Component } from "react";
  import axios from "axios";
-let API = process.env.REACT_APP_API_URL;
+let API = '/.netlify/functions/';
 class Result extends Component {
     constructor(props, ctx) {
         super(props, ctx);
@@ -11,9 +11,10 @@ class Result extends Component {
     };
     componentDidMount() {
         const { collectedAnswers, quizId, resultAnswersMap } = this.props;
+        console.log(this.props)
         axios
             .post(API + "getResult", {
-                quizId,
+                quizId:1,
                 collectedAnswers,
                 resultAnswersMap
             })

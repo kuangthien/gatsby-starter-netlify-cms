@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
 import Quiz from '../Quiz'
-import axios from 'axios'
-
 import ResultComputed from './Result'
-
-let API = process.env.REACT_APP_API_URL
 
 class QuizSection extends Component {
   constructor(props, context) {
@@ -122,7 +118,7 @@ class QuizSection extends Component {
         <ResultComputed
           collectedAnswers={this.state.collectedAnswers}
           quizId={this.props.quizId}
-          resultAnswersMap={this.state.resultAnswersMap}
+          resultAnswersMap={this.props.resultAnswersMap}
         />
       )
     } else {

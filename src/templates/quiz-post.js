@@ -31,14 +31,14 @@ export const QuizPostTemplate = ({
 
             <p>{description}</p>
             {/* <PostContent content={content} /> */}
-            {/* {quizType === 'feedback-computed' && (
+            {quizType === 'feedback-computed' && (
               <QuizDetailFeedbackComputed
                 quizQuestions={questions}
                 quizTitle={title}
                 quizImage={image}
                 resultAnswersMap={resultAnswersMap}
               />
-            )} */}
+            )}
             {quizType === 'feedback-instant' && (
               <QuizDetailFeedbackInstant
                 quizQuestions={questions}

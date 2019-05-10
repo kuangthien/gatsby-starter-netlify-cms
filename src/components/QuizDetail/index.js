@@ -1,8 +1,7 @@
-import React, { Component } from 'react'
-
+import React from 'react'
 import './styles.scss'
 
-class QuizDetail extends Component {
+class QuizDetail extends React.Component {
   constructor(props, context) {
     super(props, context)
 
@@ -15,23 +14,13 @@ class QuizDetail extends Component {
       question => question.answers
     )
 
-    //   this.setState({
-    //     quizType: "feedback-computed",
-    //     question: quizQuestions[0].question,
-    //     answerOptions: shuffledAnswerOptions[0],
-    //     questionImage: quizQuestions[0].image,
-    //     quizImage,
-    //     quizTitle,
-    //     resultAnswersMap,
-    //     quizQuestions
-    // });
     this.setState({
-      quizType: 'feedback-instant',
-      questionContent: quizQuestions[0].content,
+      question: quizQuestions[0].question,
       answerOptions: shuffledAnswerOptions[0],
       questionImage: quizQuestions[0].image,
       quizImage,
       quizTitle,
+      resultAnswersMap,
       quizQuestions,
     })
   }
