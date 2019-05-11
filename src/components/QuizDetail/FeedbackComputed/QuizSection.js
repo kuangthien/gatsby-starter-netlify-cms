@@ -4,11 +4,11 @@ import Quiz from '../Quiz'
 class QuizSection extends Component {
   constructor(props, context) {
     super(props, context)
+    const { quizQuestions } = props;
 
     this.state = {
       counter: 0,
       questionId: 1,
-      question: '',
       answerOptions: [],
       answer: '',
       wannaResult: false,
@@ -18,7 +18,12 @@ class QuizSection extends Component {
       quizTitle: '',
       quizQuestions: [],
       ...this.props,
+      question: quizQuestions[0].content,
+
     }
+    console.log(this.state)
+
+
   }
 
   setNextQuestion = () => {
@@ -29,7 +34,7 @@ class QuizSection extends Component {
     this.setState({
       counter: counter,
       questionId: questionId,
-      question: quizQuestions[counter].question,
+      question: quizQuestions[counter].content,
       feedback: quizQuestions[counter].feedback,
       questionImage: quizQuestions[counter].image,
       answerOptions: quizQuestions[counter].answers,
