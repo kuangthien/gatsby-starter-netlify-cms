@@ -4,7 +4,7 @@ title: Đoán món ăn Việt Nam qua hình ảnh
 date: 2016-12-17T15:04:10.000Z
 featuredpost: false
 quizType: feedback-instant
-featuredimage: /img/flavor_wheel.jpg
+featuredimage: /img/cover.jpg
 description: Hãy thực hiện một chuyến trải nghiệm ẩm thực bằng hình ảnh và đoán xem những món ăn này tên là gì, đến từ đâu.
 questions:
   - answers:
@@ -14,7 +14,7 @@ questions:
       - content: ' Bún riêu cua'
     content: Đây là món ăn gì?
     feedback: ' Đây là món bún đũa nổi tiếng được bán trên vỉa hè và các quán bình dân ở Nam Định. Món ăn lót dạ này trông khá giống bún riêu nhưng chỉ cho cà chua và mắm tôm chứ không thêm dấm bỗng, me, sấu, cũng không ăn kèm rau sống mà ăn với rau muống luộc, rau dút, rau cải. Ở Hà Nội và TP.HCM, người ta gọi đây là “canh bún”. '
-    image: /images/uploads/doan-mon-an-viet-nam-qua-hinh-1388-4315-1469085365.jpg
+    image: /img/1.jpg
   - answers:
       - content: Bánh khọt
       - content: Bánh tôm

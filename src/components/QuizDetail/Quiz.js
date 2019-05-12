@@ -1,5 +1,6 @@
 import React from 'react'
 import AnswerOption from '../AnswerOption'
+import PreviewCompatibleImage from '../PreviewCompatibleImage';
 
 function Quiz(props) {
   function renderAnswerOptions(key) {
@@ -36,6 +37,14 @@ function Quiz(props) {
           backgroundImage: `url(${props.questionImage})`,
         }}
       >
+
+ 
+      <PreviewCompatibleImage
+                        imageInfo={{
+                          image: props.questionImage,
+                       
+                        }}
+                      />
         {props.feedback && props.answer && (
           <div>
             <button

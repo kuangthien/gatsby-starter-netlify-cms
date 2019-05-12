@@ -103,7 +103,13 @@ export const pageQuery = graphql`
         questions {
           content
           feedback
-          image
+          image{
+            childImageSharp {
+              fluid(maxWidth: 2048, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
           answers {
             content
             is_correct
