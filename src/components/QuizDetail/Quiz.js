@@ -1,6 +1,5 @@
 import React from 'react'
 import AnswerOption from '../AnswerOption'
-import PreviewCompatibleImage from '../PreviewCompatibleImage';
 
 function Quiz(props) {
   function renderAnswerOptions(key) {
@@ -23,7 +22,7 @@ function Quiz(props) {
         }`}
       >
         {props.hasCorrectAnswer ? 'Đúng rồi' : 'Sai rồi'}!
-        <i class="fas fa-angle-down" />
+        <i className="fas fa-angle-down" />
       </div>
     )
   }
@@ -34,17 +33,11 @@ function Quiz(props) {
           !props.buttonAction ? 'd-none' : ''
         }`}
         style={{
-          backgroundImage: `url(${props.questionImage})`,
+          backgroundImage: props.questionImage
+            ? `url(${props.questionImage})`
+            : 'none',
         }}
       >
-
- 
-      <PreviewCompatibleImage
-                        imageInfo={{
-                          image: props.questionImage,
-                       
-                        }}
-                      />
         {props.feedback && props.answer && (
           <div>
             <button

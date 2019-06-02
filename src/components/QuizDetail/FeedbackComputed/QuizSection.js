@@ -4,7 +4,7 @@ import Quiz from '../Quiz'
 class QuizSection extends Component {
   constructor(props, context) {
     super(props, context)
-    const { quizQuestions } = props;
+    const { quizQuestions } = props
 
     this.state = {
       counter: 0,
@@ -14,28 +14,22 @@ class QuizSection extends Component {
       wannaResult: false,
       questionImage: null,
       collectedAnswers: [],
-      quizImage: '',
-      quizTitle: '',
       quizQuestions: [],
-      ...this.props,
-      question: quizQuestions[0].content,
-
     }
-    console.log(this.state)
-
-
+    this.state.question = this.props.quizQuestions[0].content
+    this.state.answerOptions = this.props.quizQuestions[0].answers
+    this.state.feedback = this.props.quizQuestions[0].feedback
   }
 
   setNextQuestion = () => {
     const counter = this.state.counter + 1
     const questionId = this.state.questionId + 1
-    const { quizQuestions } = this.state
+    const { quizQuestions } = this.props
 
     this.setState({
       counter: counter,
       questionId: questionId,
       question: quizQuestions[counter].content,
-      feedback: quizQuestions[counter].feedback,
       questionImage: quizQuestions[counter].image,
       answerOptions: quizQuestions[counter].answers,
       answer: '',
@@ -67,7 +61,9 @@ class QuizSection extends Component {
   }
 
   move = () => {
-    if (this.state.questionId < this.state.quizQuestions.length) {
+    const { quizQuestions } = this.props
+
+    if (this.state.questionId < quizQuestions.length) {
       this.collectAnswers({ next: this.setNextQuestion })
     } else {
       setTimeout(
@@ -93,11 +89,11 @@ class QuizSection extends Component {
         <div
           className="quiz-header fz-22 p-3 pb-5 text-right text-lowercase  "
           style={{
-            backgroundImage: `url(${this.state.quizImage})`,
+            backgroundImage: `url(${this.props.quizImage})`,
           }}
         >
           <span className="text p-2   mb-2 text-light">
-            {this.state.quizTitle}
+            {this.props.quizTitle}
           </span>
         </div>
 
@@ -118,7 +114,10 @@ class QuizSection extends Component {
   render() {
     let render
     if (this.state.wannaResult) {
-      render = this.props.renderResultComputed(this.state)
+      render = this.props.renderResultComputed({
+        ...this.state,
+        resultAnswersMap: this.props.resultAnswersMap,
+      })
     } else {
       render = this.renderQuiz()
     }
