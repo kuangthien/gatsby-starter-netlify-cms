@@ -18,9 +18,7 @@ const QuizList = props => {
                     id: quizPost.id,
                     title: quizPost.frontmatter.title,
                     desc: quizPost.frontmatter.description,
-                    image:
-                      quizPost.frontmatter.featuredimage.childImageSharp.fluid
-                        .src,
+                    image: null,
                     slug: quizPost.fields.slug,
                   }}
                   key={quizPost.id}

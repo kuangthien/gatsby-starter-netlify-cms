@@ -74,7 +74,7 @@ const BlogPost = ({ data }) => {
         }
         title={post.frontmatter.title}
         questions={post.frontmatter.questions}
-        image={post.frontmatter.featuredimage.childImageSharp.fluid.src}
+        image={null}
         quizType={post.frontmatter.quizType}
         resultAnswersMap={post.frontmatter.resultAnswersMap}
       />
@@ -103,19 +103,12 @@ export const pageQuery = graphql`
         questions {
           content
           feedback
-          image{
-            childImageSharp {
-              fluid(maxWidth: 2048, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
+        
           answers {
             content
             is_correct
           }
         }
-        resultAnswersMap
         quizType
       }
     }
