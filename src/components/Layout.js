@@ -45,7 +45,9 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:image" content="/img/og-image.jpg" />
       </Helmet>
       <AppHeader />
-      <div>{children}</div>
+      <div className="container-fluid px-0 px-sm-3      pt-3 pt-md-4">
+        {children}
+      </div>
     </div>
   )
 }

@@ -14,7 +14,6 @@ $container-max-widths: (
 @import '../../../node_modules/bootstrap-scss/bootstrap.scss';
 @import 'common.scss';
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600');
-// @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&subset=vietnamese');
 
 .container-fluid {
   max-width: 1136px;
@@ -23,8 +22,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Fira Sans', sans-serif;
-//   font-family: 'Roboto Condensed', sans-serif;
-
   background: #f4f4f4;
 }
 

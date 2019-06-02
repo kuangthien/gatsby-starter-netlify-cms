@@ -3,17 +3,16 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-import QuizDetailFeedbackInstant from '../components/QuizDetail/FeedbackInstant'
-import QuizDetailFeedbackComputed from '../components/QuizDetail/FeedbackComputed'
+import { QuizDetailComposition } from '../components/QuizDetail'
 
 export const QuizPostTemplate = ({
   content,
   contentComponent,
   description,
-  questions,
-  title,
+  questions: quizQuestions,
+  title: quizTitle,
   helmet,
-  image,
+  image: quizImage,
   quizType,
   resultAnswersMap,
 }) => {
@@ -25,27 +24,18 @@ export const QuizPostTemplate = ({
       <div className="container content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
-            <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
-              {title}
-            </h1>
-
-            <p>{description}</p>
-            {/* <PostContent content={content} /> */}
-            {quizType === 'feedback-computed' && (
-              <QuizDetailFeedbackComputed
-                quizQuestions={questions}
-                quizTitle={title}
-                quizImage={image}
-                resultAnswersMap={resultAnswersMap}
-              />
-            )}
-            {quizType === 'feedback-instant' && (
-              <QuizDetailFeedbackInstant
-                quizQuestions={questions}
-                quizTitle={title}
-                quizImage={image}
-              />
-            )}
+            <QuizDetailComposition
+              {...{
+                question: quizQuestions[0].content,
+                answerOptions: quizQuestions[0].answers,
+                questionImage: quizQuestions[0].image,
+                quizImage,
+                quizTitle,
+                quizQuestions,
+                quizType,
+                resultAnswersMap,
+              }}
+            />
           </div>
         </div>
       </div>
@@ -103,7 +93,7 @@ export const pageQuery = graphql`
         questions {
           content
           feedback
-        
+
           answers {
             content
             is_correct

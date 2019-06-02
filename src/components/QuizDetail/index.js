@@ -5,6 +5,16 @@ import QuizDetailFeedbackInstant from './FeedbackInstant'
 
 export { QuizDetailFeedbackComputed, QuizDetailFeedbackInstant }
 
+export const QuizDetailComposition = props => {
+  const { quizType, quizQuestions, quizTitle, quizImage, resultAnswersMap } = props
+  return (
+    <>
+      {quizType === 'feedback-computed' && <QuizDetailFeedbackComputed quizQuestions={quizQuestions} quizTitle={quizTitle} quizImage={quizImage} resultAnswersMap={resultAnswersMap} />}
+      {quizType === 'feedback-instant' && <QuizDetailFeedbackInstant quizQuestions={quizQuestions} quizTitle={quizTitle} quizImage={quizImage} />}
+    </>
+  )
+}
+
 class QuizDetail extends React.Component {
   constructor(props, context) {
     super(props, context)
