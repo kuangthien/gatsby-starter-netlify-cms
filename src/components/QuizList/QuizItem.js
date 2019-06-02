@@ -1,8 +1,8 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 const QuizItem = props => {
-  const { id, title, desc, image, slug } = props
+  const { id, title, desc, image, slug, navTo } = props
+  const NavTo = props => navTo(props)
 
   return (
     <div className=" bg-white border border-left-0 border-right-0 mb-1 mb-md-2       position-relative list-item">
@@ -24,14 +24,13 @@ const QuizItem = props => {
         <p className="p-1 d-none d-sm-block txt">{desc}</p>
       </div>
 
-      <Link
-        to={slug}
-        className="position-absolute  "
+      <NavTo
+        className="position-absolute"
         style={{
-          left: 0,
           top: 0,
-          bottom: 0,
+          left: 0,
           right: 0,
+          bottom: 0,
         }}
       />
     </div>
