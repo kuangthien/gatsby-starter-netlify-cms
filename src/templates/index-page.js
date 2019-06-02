@@ -5,7 +5,6 @@ import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
-import QuizList from '../components/QuizList'
 
 export const IndexPageTemplate = ({
   image,
@@ -153,8 +152,8 @@ IndexPage.propTypes = {
   }),
 }
 
-// export default IndexPage
-export default  () => <Layout><QuizList /></Layout>
+export default IndexPage
+
 export const pageQuery = graphql`
   query IndexPageTemplate {
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
